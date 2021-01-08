@@ -6,7 +6,7 @@
 }
 
 body{
-  background: #66a5ff;
+  background: #8d8d8d;
 }
 
 
@@ -27,6 +27,105 @@ img {
     margin-bottom: 5px; /* Отступ снизу */
   border: 10px  #FFFFFF;
 }
+
+
+
+
+
+
+
+
+
+.bulletsBlock:after {
+  content: "";
+  display: table;
+  clear: both;
+
+}
+
+.bulletsBlock > div {
+  width: 10%;
+  float: left;
+  background: rgba(144, 139, 139, 0.42);
+  margin-left:5%;
+  text-align: center;
+  position: relative;
+  padding-bottom: 31.7%;
+  cursor: pointer;
+  -webkit-transition:all 0.35s linear;
+  transition:all 0.35s linear;
+}
+
+.bulletsBlock > div:first-child {
+  margin-left:0;
+}
+
+.bulletsBlock > div:hover {
+  -webkit-box-shadow: 0 35px 35px -35px #000000;
+  -moz-box-shadow: 0 35px 35px -35px #000000;
+  box-shadow: 0 35px 35px -35px #000000;
+}
+.bullet-item span{
+  line-height: 2.5em;
+  font-size: 6.5em;
+  color: #12859e;
+  position: absolute;
+  top:0;
+  left:0;
+  display: block;
+  width: 100%;
+  -webkit-transition:all 0.35s ease;
+  transition:all 0.35s ease;
+}
+
+
+
+.titleBullet, .hideText {
+  position: absolute;
+  left:0;
+  bottom:0;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  color: #fff;
+  -webkit-transition:all 0.35s ease;
+  transition:all 0.35s ease;
+}
+
+.titleBullet {
+  line-height: 4.5em;
+  font-size: 1.188em;
+  background:#3B3B3B;
+  z-index: 10;
+}
+
+.hideText {
+  line-height: 1em;
+  font-size: 1.20em;
+  padding: 1em 0;
+  background:#24ACD8;
+  font-weight: 300;
+  z-index: 8;
+  height: 70px;
+  -webkit-transition:all 0.35s linear 0.2s;
+  transition:all 0.35s linear 0.2s;
+}
+
+.bulletsBlock > div:hover p.titleBullet{
+  bottom:80px;
+}
+
+.bulletsBlock > div:hover p.hideText{
+  background:#454545;
+}
+
+
+
+
+
+
+
+
 
 
 .card {
