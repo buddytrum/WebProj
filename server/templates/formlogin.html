@@ -1,0 +1,35 @@
+{% extends "Formbase.html" %}
+{% block content %}
+    <br>
+<center>
+    <h1 align="center">Sign In</h1>
+<br>
+<br>
+    <form action="" method="post" novalidate>
+        %% form.hidden_tag() %%
+        <p>
+            %% form.username.label %%<br><br>
+            %% form.username(size=32) %%
+        </p>
+    <br><br><br>
+        <p>
+            %% form.password.label %%<br><br>
+            %% form.password(size=32) %%
+        </p>
+    <br><br>
+        <p>%% form.remember_me() %%</p> <br>
+          <p>  %% form.remember_me.label %%</p>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul class=flashes>
+                    {% for message in messages %}
+                        <li>%%message %%</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+    <br>
+        <p>%% form.submit() %%</p>
+    </form>
+</center>
+{% endblock %}
